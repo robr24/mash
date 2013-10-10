@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+
+        <style>
+
+        /*-------------------------
+            The Alarm
+        --------------------------*/
+
+
+        .clock .alarm{
+            width:16px;
+            height:16px;
+            background:url('alarm_light.jpg');
+            opacity:0.2;
+            display: block;
+            float: left;
+            margin-right: 10px;
+
+        }
+
+        </style>
+	</head>
+
+	<body>
+
+		<div class="clock light">
+			<div class="display">
+				<!-- <div class="weekdays"></div> -->
+				<div class="alarm"></div>
+				<div class="digits"></div>
+			</div>
+		</div>
+
+        
+		<!-- JavaScript Includes -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+
+    <script>
+moment.lang('en', {
+    meridiem : function (hour, isLowercase) {
+        if (hour < 12) {
+            return "a";
+        } else {
+            return "p";
+        }
+    }
+});
+
+$(document).ready(function update_time(){
+var now = moment().format("h:MM A");
+    $(".digits").text(now)
+    setTimeout(update_time, 1000);
+});
+
+    </script>
+
+
+	</body>
+</html>

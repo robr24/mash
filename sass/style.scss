@@ -1,0 +1,146 @@
+
+
+
+//////////////////////////////
+// Set legacy support
+//
+// If you need support for IE6 or IE7, you should install the Box Sizing polyfill.
+// In your project's folder from the command line, type the following:
+// compass install singularitygs/box-sizing
+//////////////////////////////
+$legacy-support-for-ie6:     false;
+$legacy-support-for-ie7:     false;
+$legacy-support-for-mozilla: false;
+
+//////////////////////////////
+// Import Base
+//////////////////////////////
+@import "partials/base";
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  //background-color: #f3f3f3;
+  background: #3f3f3f;
+  font-family: "Open Sans";
+}
+
+$grids: 18;
+//$grids: add-grid(6 at 30em);
+//$grids: add-grid(9 at 40em);
+//$grids: add-grid(12 at 50em);
+$gutters: .5;
+
+
+.page-wrap {
+  //@include background-grid;
+  max-width: 1050px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.main-content{
+  @include grid-span(10, 1);
+  //background: #3f3f3f;
+
+}
+
+.playlist img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+aside {
+  @include grid-span(8, 12);
+  background: #3f3f3f;
+}
+h2 {font-size: 26px}
+
+.playlist-results {padding: 20px; width: 100%}
+
+.playlist-results li {padding: 10px 0}
+
+#info {
+    height:24px;
+}
+
+h2 {
+    margin-top:10px;
+}
+
+#results {
+    margin-top:20px;
+}
+
+
+
+.wx-geo {
+padding: 20px;
+background: none repeat scroll 0 0 #259DE4;
+color: #CCCCCC;
+}
+.wx-geo:after {
+content: "";
+border-bottom: 10px solid rgba(0, 0, 0, 0);
+border-top: 10px solid rgba(0, 0, 0, 0);
+display: inline-block;
+  height: 0;
+  left: 100%;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+
+
+
+.wx-geo p {
+    font-size: 12px;
+    line-height: 1.25em;
+    margin: 0 0 4px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;}
+
+
+.wx-geo h2 {
+		background: none repeat scroll 0 0 rgba(0, 106, 168, 0.4);
+	    font-size: 18px;
+	    line-height: 1.25em;
+		border-radius: 3px 3px 3px 3px;
+		margin: 7px 0 0;
+		padding: 5px 10px;
+		color: #FFFFFF;
+	}
+
+.wx-geo .controls {
+margin: 10px 0 0;
+}
+
+.wx-geo.autodetect.active .primary:before {
+	border-bottom: 7px solid #006AA8;
+   border-left: 7px solid rgba(0, 0, 0, 0);
+   border-right: 7px solid rgba(0, 0, 0, 0);
+   content: "";
+   display: inline-block;
+   height: 0;
+   left: 10px;
+   position: absolute;
+   top: -7px;
+   width: 0;
+}
+
+.wx-geo .primary:before{
+    border-bottom: 7px solid #259DE4;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    height: 0;
+    left: 10px;
+    position: absolute;
+    top: -7px;
+    width: 0;
+}

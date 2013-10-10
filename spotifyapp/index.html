@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<!--
+    This is a demonstration app that shows how to use the Echo Nest API
+    from within a Spotify APP.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CHIME</title>
+        <!-- Spotify CSS files -->
+        <!--<link rel="stylesheet" href="sp://import/css/adam.css">-->
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/eve.css">
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/api.css">
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/player.css">
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/list.css">
+
+        <!-- Project CSS files -->
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/github.css">
+
+    <link rel="stylesheet" href="sp://import/css/adam.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+
+</head>
+
+<body>
+        <div id="wrapper" class="page-wrap">
+            <div class="header-wrapper"></div>
+
+    <h2 id='title'> CHIME </h2>
+
+
+       <div class="main-content">
+
+
+
+
+        <img src="/img/fb-login.png" id="fb-login">
+        <div id="status"></div>
+
+
+
+
+
+<div data-statekey="state:US.GA:US" data-dmakey="DMA:US.524:US" data-locid="30360:4:US" class="wx-geo autodetect cycle-slide active" style="position: static; top: 0px; left: 0px; z-index: 99; display: block; opacity: 1;">
+<p>What's happening:</p>
+<h2 class="loc-auto">Atlanta, GA (30339)</h2>
+<form><div class="controls">
+<button class="button primary js-save-loc">I'm here!</button>
+<button data-href="#wx-lbox-locsearch" class="button secondary js-add-loc">Change</button><p class="prompt">Is this your location? Click above to confirm.</p></div></form>
+</div>
+
+       </div>
+
+
+       <aside>
+           <div class="playlist" id="playlistSunny">
+               <div id="play-sunny"><img src="http://s.imwx.com/img/mash/sunnyday-bg.png" width="372" height="372"></div>
+
+           </div>
+
+
+    <div id="info"> </div>
+    <button id="new" onclick="makePlaylistFromNowPlaying()"> Generate Playlist </button>
+    <h2>My SUNNY DAY Playlist</h2>
+    <h3 id='playlist-name'> Playlist Name</h3>
+    <div id='all-results'>
+        <ul id="results" class="playlist-results"> </ul>
+    </div>
+    <button id='save-button'> Save playlist</button>
+       </aside>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+
+
+        /* Instantiate the global sp object; include models */
+        var sp = getSpotifyApi();
+        var auth = sp.require('$api/auth');
+
+        /* Set the permissions you want from the user. For more
+         * info, check out http://bit.ly/A4KCW3 */
+        var permissions = ['user_about_me'];
+        var app_id = '126891607432106';
+        var fbButtonHTML = document.getElementById('fb-login');
+
+        fbButtonHTML.addEventListener('click', authFB);
+
+        function authFB() {
+            auth.authenticateWithFacebook(app_id, permissions, {
+                onSuccess: function(accessToken, ttl) {
+                    fbButtonHTML.style.display = 'none';
+                    var statusHTML = document.getElementById('status');
+                    statusHTML.innerText = 'Your access token: ' + accessToken;
+                },
+                onFailure: function(error) {
+                    console.log('Authentication failed with error: ' + error);
+                },
+                onComplete: function() { }
+            });
+        }
+
+
+
+
+var sp = getSpotifyApi(1);
+var models = sp.require("sp://import/scripts/api/models");
+jQuery.ajaxSettings.traditional = true;  
+
+function makePlaylistFromNowPlaying() {
+    var track = models.player.track;
+    if (track == null) {
+        info("Start playing something and I'll make a playlist of good songs based on that song");
+    } else {
+        fetchPlaylist(models.player.track.artists[0], 10);
+    }
+}
+
+function createPlayButton(song) {
+    var span = $("<span>");
+    var button = $("<img src='play.png'>");
+    var song_name = ' ' + song.title + " by " + song.artist_name;
+
+    button.click(function() {
+        var uri = getSpotifyID(song);
+        models.player.play(uri);
+    });
+    span.append(button);
+    span.append(song_name);
+    return span;
+}
+
+function getSpotifyID(song) {
+    var uri = song.tracks[0].foreign_id;
+    return uri.replace('spotify-WW', 'spotify');
+}
+
+function fetchPlaylist(artist, size) {
+    info('Getting playlist for ' + artist.name);
+    var artist_id = artist.uri.replace('spotify', 'spotify-WW');
+    var url = 'http://developer.echonest.com/api/v4/playlist/basic?api_key=Y8F0HE0MDRYSYI9RH &callback=?';
+
+    $.getJSON(url, { 'artist_id': artist_id, 'format':'jsonp', limit: true,
+            'results': size, 'type':'artist-radio', bucket : ['id:spotify-WW', 'tracks']}, function(data) {
+        if (checkResponse(data)) {
+            info("");
+            $('#playlist-name').text('Playlist seed: ' + artist.name);
+            $("#results").empty();
+            var curTracks = []
+            for (var i = 0; i < data.response.songs.length; i++) {
+                var li = $("<li>");
+                li.append(createPlayButton(data.response.songs[i]));
+                $("#results").append(li);
+            }
+
+            $("#save-button").unbind();
+            $("#save-button").click( function() {
+                savePlaylist(artist.name + ' playlist', data.response.songs);
+            });
+        } else {
+            info("trouble getting results");
+        }
+    });
+}
+
+function savePlaylist(title, songs) {
+    var thePlaylist = new models.Playlist(title);
+    for (var i = 0; i < songs.length; i++) {
+        thePlaylist.add(getSpotifyID(songs[i]));
+    }
+}
+
+
+function info(s) {
+    $("#info").text(s);
+}
+
+function error(s) {
+    info(s);
+}
+
+function checkResponse(data) {
+    if (data.response) {
+        if (data.response.status.code != 0) {
+            error("Whoops... Unexpected error from server. " + data.response.status.message);
+            log(JSON.stringify(data.response));
+        } else {
+            return true;
+        }
+    } else {
+        error("Unexpected response from server");
+    }
+    return false;
+}
+
+$(document).ready(function() {
+    makePlaylistFromNowPlaying();
+});
+
+</script></html>
