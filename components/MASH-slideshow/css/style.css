@@ -39,12 +39,12 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 }
-/* General Demo Style */
+
 body{
-	background: #000;
+	background: #A7A9AC;
 	font-weight: 400;
 	font-size: 15px;
-	color: #aa3e03;
+	color: #414042;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -110,7 +110,7 @@ a{
     animation: titleAnimation 36s linear infinite 0s; 
 }
 .full-slideshow li div h3 { 
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
     font-size: 240px;
     padding: 0;
     line-height: 200px; 

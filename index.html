@@ -1,35 +1,110 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Your App Title</title>
-	<link rel="stylesheet" href="sp://import/css/eve.css">
-	<link rel="stylesheet" href="sp://import/css/api.css">
-	<link rel="stylesheet" href="css/main.css">
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <title>CHIME DEMO - new</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <style>
-      .header {width: 100%; background-color: #f2f2f2; height: 60px;}
-    </style>
+    </head>
+    <body id="home">
+        <ul class="full-slideshow">
+            <li><span>Image 01</span><div></div></li>
+            <li><span>Image 02</span><div></div></li>
+            <li><span>Image 03</span><div></div></li>
+            <li><span>Image 04</span><div></div></li>
+            <li><span>Image 05</span><div></div></li>
+            <li><span>Image 06</span><div></div></li>
+        </ul>
+        
+        <div class="pg-home page-wrap">
+            <div class="top-wrap">
+                <div class="top-menu icon-large">
+
+                </div>
+            </div>
+            <div class="bottom-wrap">
+                <div class="forecast-row">
+                    <!--Weather Details-->
+                    <div class="weather-details">
+                        <div class="heading clear">
+                            <div class="forecast-location">
+                                <span class="icon-small magnify"></span>
+                                <span class="forecast-city">Atlanta</span>
+                            </div>
+                            <div class="forecast-time">
+                                <div class="clock">
+                                    <div class="display">
+                                        <div class="digits"></div>
+                                        <span class="icon-small alarm"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                      <div class="content-obs">
+                        <!-- wx icon -->
+
+                        <div style="background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"class="forecast-details-wxicon"></div>
+                        <!-- // wx icon -->
+
+                        <div class="content-obs-text">
+                            <span class="content-obs-temp">72&deg;</span>
+                            <span class="content-obs-phrase">Sunny</span>
+                        </div><!-- // content obs text -->
+                      </div>
+
+            </div>
+            </div>
+
+        <style>
 
 
-</head>
-<body>
-<div class="header">
-    <img src="http://s.imwx.com/img/mash/mash-logo2.png" width="440" height="60">
-</div>
-<div id="wrapper">
-	<div id="content">
+        </style>
+            <div class="scrubber-row">
+                <div class="song-img"><img src="http://placehold.it/40x40/414042/ffffff" width="40" height="40"></div>
+                <div class="song-text">
+                    <div class="song-title">Ain't No Sunshine</div>
+                    <div class="song-artist">Bill Withers</div>
+                </div>
+                <div class="player-controls">
+                    <span class="prev-song">Prev</span>
+                    <span class="play-song">Play</span>
+                    <span class="next-song">Next</span>
+                </div>
+            </div>
 
-	</div>
-	<div id="offline">Unable to connect to the internet</div>
-</div>
+        </div>
 
-<script type="text/javascript" src="js/libs/jquery-1.8.1.min.js"></script>
-<script type="text/javascript" src="js/libs/mustache.js"></script>
-<script type="text/javascript" src="js/libs/sammy-0.7.1.js"></script>
-<script type="text/javascript" src="js/libs/sammy.mustache.js"></script>
-<script type="text/javascript" src="js/libs/spotify.lib.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+		<!-- JavaScript Includes -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
 
-</body>
+        <script>
+            moment.lang('en', {
+                meridiem : function (hour, isLowercase) {
+                    if (hour < 12) {
+                        return "A";
+                    } else {
+                        return "P";
+                    }
+                }
+            });
+
+            function update_time(){
+            var now = moment().format("h:MM A");
+            $(".digits").text(now)}
+
+            update_time();
+            setInterval(update_time, 1000);
+
+
+
+
+        </script>
+
+
+    </body>
 </html>
