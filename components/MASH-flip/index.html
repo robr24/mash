@@ -1,0 +1,163 @@
+<html>
+<head>
+    <style>
+
+ /* entire container, keeps perspective */
+
+		/* sexy */
+
+
+		/* simple */
+		.flip-container {
+			-webkit-perspective: 1000;
+			-moz-perspective: 1000;
+			perspective: 1000;
+
+			border: 1px solid #ccc;
+		}
+
+
+			.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				filter: FlipH;
+    			-ms-filter: "FlipH";
+			}
+
+		.flip-container, .front, .back {
+			width: 320px;
+			height: 427px;
+		}
+
+		.flipper {
+			-webkit-transition: 0.6s;
+			-webkit-transform-style: preserve-3d;
+
+			-moz-transition: 0.6s;
+			-moz-transform-style: preserve-3d;
+
+			transition: 0.6s;
+			transform-style: preserve-3d;
+
+			position: relative;
+		}
+
+		.front, .back {
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			backface-visibility: hidden;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.front {
+			background: lightgreen;
+			z-index: 2;
+		}
+
+		.back {
+			background: lightblue;
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+		}
+
+		.front .name {
+			font-size: 2em;
+			display: inline-block;
+			background: rgba(33, 33, 33, 0.9);
+			color: #f8f8f8;
+			font-family: Courier;
+			padding: 5px 10px;
+			border-radius: 5px;
+			bottom: 60px;
+			left: 25%;
+			position: absolute;
+			text-shadow: 0.1em 0.1em 0.05em #333;
+
+			-webkit-transform: rotate(-20deg);
+			-moz-transform: rotate(-20deg);
+			transform: rotate(-20deg);
+		}
+
+
+		.back p {
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding: 0 20px;
+		}
+
+		/* vertical */
+		.vertical.flip-container {
+			position: relative;
+		}
+
+			.vertical .back {
+				-webkit-transform: rotateX(180deg);
+				-moz-transform: rotateX(180deg);
+				transform: rotateX(180deg);
+			}
+
+			.vertical.flip-container .flipper {
+				-webkit-transform-origin: 100% 213.5px;
+				-moz-transform-origin: 100% 213.5px;
+				transform-origin: 100% 213.5px;
+			}
+
+			.vertical.flip-container:hover .flipper {
+				-webkit-transform: rotateX(-180deg);
+				-moz-transform: rotateX(-180deg);
+				transform: rotateX(-180deg);
+			}
+	</style>
+</head>
+<body>
+
+	<h2>Toggle Flip (Horizontal)</h2>
+	<div class="flip-container doubleTap" id="flip-toggle">
+		<div class="flipper">
+			<div class="front">
+				<span class="name">Front</span>
+			</div>
+			<div class="back">
+                Back
+            </div>
+		</div>
+	</div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+(function($) {
+     $.fn.doubleTap = function(doubleTapCallback) {
+         return this.each(function(){
+			var elm = this;
+			var lastTap = 0;
+			$(elm).bind('vmousedown', function (e) {
+                                var now = (new Date()).valueOf();
+				var diff = (now - lastTap);
+                                lastTap = now ;
+                                if (diff < 250) {
+		                    if($.isFunction( doubleTapCallback ))
+		                    {
+		                       doubleTapCallback.call(elm);
+		                    }
+                                }
+			});
+         });
+    }
+})(jQuery);
+
+$(".doubleTap").doubleTap(function(){
+// 'this' is the element that was double tap
+    $( "#flip-toggle" ).toggleClass( "flip" );
+  });
+
+</script>
+
+</body>
+</html>

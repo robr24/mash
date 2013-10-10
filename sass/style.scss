@@ -94,6 +94,7 @@ a{
 	clear: both;
 }
 
+p {line-height: 1.8em}
 
 body, html {
   height: 100%;
@@ -115,14 +116,15 @@ $gutters: .5;
   //@include background-grid;
   //max-width: 1050px;
   margin: 0 auto;
-  min-height: 100%;
+  height: 100%;
+  position:relative;
 }
 
 
 .blurred-bg {
   background: rgba(255, 255, 255, 0.45);
   margin: 0;
-  min-height: 100%;
+  height: 100%;
   min-width: 100%;
   position: absolute;
   top: 0;
@@ -152,6 +154,14 @@ aside {
     background-color: rgba(109, 111, 113, 0.75);
 
 }
+// Playlist Page
+.pg-home .top-wrap {
+    max-height: 180px;
+    background-color: transparent;
+
+
+}
+// Playlist Page
 .pg-playlist .top-wrap {
     max-height: 180px;
 
@@ -160,14 +170,28 @@ aside {
   margin-top: 180px;
 
 }
+// Playlist Details Page
+.pg-playlist-details .top-wrap {
+    max-height: 150px;
+
+}
+.pg-playlist-details .mid-wrap {
+  margin-top: 170px;
+
+}
+.pg-playlist-details .top-heading {
+    margin-bottom: 0px;
+}
 
 .bottom-wrap {
     position: fixed;
-    bottom: 0px;
+    left:0;
+    bottom: 0;
     width: 100%;
 }
 .top-menu {
   float: left;
+  margin: 10px;
 }
 .scrubber-row {
     background-color: rgba(109, 111, 113, 0.75);
@@ -300,10 +324,10 @@ font-size: 24px;
   display:block;
 }
 
-.song-info-row, .playlist-row {
+.song-info-row, .playlist-row, .playlist-details-row, .playlist-suggestions-row {
   margin: 20px;
 }
-.song-info-row .song-title {
+h1.section-title {
   float: left;
   display: inline-block;
   font-size: 30px;
@@ -350,6 +374,18 @@ font-size: 24px;
   text-align: left;
   display: inline-block;
 }
+
+.playlist-thumbs {
+  padding-top:20px
+}
+.play-thumb {
+  width: 25%;
+  float: left;
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 
 /* SLIDESHOW */
 
