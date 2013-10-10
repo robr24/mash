@@ -17,13 +17,14 @@
 		}
 
 
-			.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+			.flip-container.hover .flipper, #flip-toggle.flip .flipper {
 				-webkit-transform: rotateY(180deg);
 				-moz-transform: rotateY(180deg);
 				transform: rotateY(180deg);
 				filter: FlipH;
     			-ms-filter: "FlipH";
 			}
+
 
 		.flip-container, .front, .back {
 			width: 320px;
@@ -65,33 +66,6 @@
 			transform: rotateY(180deg);
 		}
 
-		.front .name {
-			font-size: 2em;
-			display: inline-block;
-			background: rgba(33, 33, 33, 0.9);
-			color: #f8f8f8;
-			font-family: Courier;
-			padding: 5px 10px;
-			border-radius: 5px;
-			bottom: 60px;
-			left: 25%;
-			position: absolute;
-			text-shadow: 0.1em 0.1em 0.05em #333;
-
-			-webkit-transform: rotate(-20deg);
-			-moz-transform: rotate(-20deg);
-			transform: rotate(-20deg);
-		}
-
-
-		.back p {
-			position: absolute;
-			bottom: 40px;
-			left: 0;
-			right: 0;
-			text-align: center;
-			padding: 0 20px;
-		}
 
 		/* vertical */
 		.vertical.flip-container {
@@ -119,17 +93,16 @@
 </head>
 <body>
 
-	<h2>Toggle Flip (Horizontal)</h2>
+	<h2>CARD Flip (Horizontal)</h2>
 	<div class="flip-container doubleTap" id="flip-toggle">
 		<div class="flipper">
 			<div class="front">
-				<span class="name">Front</span>
-			</div>
+FRONT			</div>
 			<div class="back">
-                Back
-            </div>
+BACK			</div>
 		</div>
 	</div>
+	<br /><br />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>
 (function($) {
@@ -152,7 +125,13 @@
     }
 })(jQuery);
 
-$(".doubleTap").doubleTap(function(){
+//$(".doubleTap").doubleTap(function(){
+//// 'this' is the element that was double tap
+//    $( "#flip-toggle" ).toggleClass( "flip" );
+//  });
+
+
+$(".doubleTap").click(function(){
 // 'this' is the element that was double tap
     $( "#flip-toggle" ).toggleClass( "flip" );
   });
