@@ -160,11 +160,12 @@ aside {
     top: 0px;
     width: 100%;
     background-color: rgba(109, 111, 113, 0.75);
-  //z-index: 2;
+  z-index: auto;
+  zoom:1;
 
 }
 .mid-wrap {
-  //z-index: 1;
+  z-index: 1;
 
 }
 // Playlist Page

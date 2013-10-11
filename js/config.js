@@ -2,7 +2,7 @@ window._skel_config = {
 	prefix: 'css/vendor/panel-style',
 	preloadStyleSheets: true,
 	resetCSS: false,
-	resetScroll: false,
+//	resetScroll: false,
 	swipeToClose: true,
 	boxModel: 'border',
 	grid: { gutters: 30 },
