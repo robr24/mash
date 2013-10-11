@@ -127,7 +127,7 @@ body, html {
 }
 
 /* line 122, ../sass/style.scss */
-.page-wrap {
+.page-wrap, .flip-container, .flipper, .front {
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -165,12 +165,6 @@ aside {
   top: 0px;
   width: 100%;
   background-color: rgba(109, 111, 113, 0.75);
-  z-index: 5;
-}
-
-/* line 166, ../sass/style.scss */
-.mid-wrap {
-  z-index: 1;
 }
 
 /* line 171, ../sass/style.scss */
