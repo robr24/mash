@@ -96,7 +96,7 @@
         width: 100%;
 	}
 
-	#audioScrubber a {
+	#audioScrubber a.skel-panels-include {
 		display: block;
 		/*margin: 0 0.85em 0 0.85em;*/
 		color: #fff;

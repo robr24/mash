@@ -1,13 +1,14 @@
 @font-face {
 	font-family: 'wxIcon';
-	src:url('http://s.imwx.com/img/mash/icon/wxIcon.eot');
-	src:url('http://s.imwx.com/img/mash/wxIcon.eot?#iefix') format('embedded-opentype'),
-		url('http://s.imwx.com/img/mash/wxIcon.woff') format('woff'),
-		url('http://s.imwx.com/img/mash/wxIcon.ttf') format('truetype'),
-		url('http://s.imwx.com/img/mash/wxIcon.svg#wxIcon') format('svg');
+	src:url('http://s.imwx.com/img/mash/icon/wxIcon-chime.eot');
+	src:url('http://s.imwx.com/img/mash/wxIcon-chime.eot?#iefix') format('embedded-opentype'),
+		url('http://s.imwx.com/img/mash/wxIcon-chime.woff') format('woff'),
+		url('http://s.imwx.com/img/mash/wxIcon-chime.ttf') format('truetype'),
+		url('http://s.imwx.com/img/mash/wxIcon-chime.svg#wxIcon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
@@ -19,6 +20,7 @@
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Use the following CSS code if you want to have a class per icon */
@@ -27,7 +29,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-location_map_pin, .icon-menu, .icon-magnifying_glass, .icon-video_camera, .icon-close, .icon-photo, .icon-alert, .icon-thin_arrow_up, .icon-thin_arrow_right, .icon-thin_arrow_left, .icon-thin_arrow_down, .icon-add_location_map_pin, .icon-video, .icon-cogwheel {
+.icon-magnifying_glass, .icon-video_camera, .icon-close, .icon-photo, .icon-alert, .icon-thin_arrow_up, .icon-thin_arrow_right, .icon-thin_arrow_left, .icon-thin_arrow_down, .icon-add_location_map_pin, .icon-menu, .icon-location_map_pin, .icon-checkmark, .icon-cogwheel, .icon-video, .icon-plus_add, .icon-x_close, .icon-eye_browse, .icon-share, .icon-thumbsup_like, .icon-alarm_clock, .icon-geo_loc_arrow, .icon-next_player_control, .icon-previous_player_control, .icon-gift_box, .icon-music_bars {
 	font-family: 'wxIcon';
 	speak: none;
 	font-style: normal;
@@ -36,12 +38,6 @@ you can use the generic selector below, but it's slower:
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-}
-.icon-location_map_pin:before {
-	content: "\71";
-}
-.icon-menu:before {
-	content: "\77";
 }
 .icon-magnifying_glass:before {
 	content: "\65";
@@ -73,9 +69,51 @@ you can use the generic selector below, but it's slower:
 .icon-add_location_map_pin:before {
 	content: "\73";
 }
-.icon-video:before {
-	content: "\64";
+.icon-menu:before {
+	content: "\77";
+}
+.icon-location_map_pin:before {
+	content: "\71";
+}
+.icon-checkmark:before {
+	content: "\67";
 }
 .icon-cogwheel:before {
 	content: "\66";
+}
+.icon-video:before {
+	content: "\64";
+}
+.icon-plus_add:before {
+	content: "\68";
+}
+.icon-x_close:before {
+	content: "\6a";
+}
+.icon-eye_browse:before {
+	content: "\6b";
+}
+.icon-share:before {
+	content: "\6c";
+}
+.icon-thumbsup_like:before {
+	content: "\7a";
+}
+.icon-alarm_clock:before {
+	content: "\78";
+}
+.icon-geo_loc_arrow:before {
+	content: "\63";
+}
+.icon-next_player_control:before {
+	content: "\76";
+}
+.icon-previous_player_control:before {
+	content: "\62";
+}
+.icon-gift_box:before {
+	content: "\6e";
+}
+.icon-music_bars:before {
+	content: "\6d";
 }
