@@ -123,7 +123,7 @@
                     backgroundImage: 'url(' + imgUrl + ')'
                 });
                 $('.content-obs-temp').html(chimeUser.temp + '&deg;');
-                $('.content-obs-phrase').html(chimeUser.desc);
+                $('.content-obs-phrase, .js-wx-phrase').html(chimeUser.desc);
 
             }
 
