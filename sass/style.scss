@@ -206,12 +206,18 @@ aside {
   float: left;
   margin: 10px;
 }
+//.scrubber-details {
+//  position: absolute;
+//  bottom: -100%;
+//}
+
 .scrubber-row {
     background-color: rgba(0, 0, 0, 0.85);
     display:block;
     height: 50px;
     line-height: 50px;
     padding: 10px;
+
 
 }
 .scrubber-row > div {

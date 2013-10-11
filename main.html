@@ -8,8 +8,18 @@
         <title>CHIME DEMO - new</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.sidr.dark.css" />
+        <!--<link rel="stylesheet" type="text/css" href="css/vendor/jquery.sidr.dark.css" />-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'/>
+
+
+		<!-- JavaScript Includes -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels-bottom.min.js"></script>
+        <!--<script src="js/jquery.sidr.min.js"></script>-->
+		<!--<script src="js/all.js"></script>-->
 
     </head>
     <body>
@@ -57,8 +67,7 @@
           <div class="content-obs">
             <!-- wx icon -->
 
-            <div style=
-            "background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"
+            <div style="background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"
             class="forecast-details-wxicon"></div><!-- // wx icon -->
 
             <div class="content-obs-text">
@@ -69,35 +78,74 @@
         </div>
       </div>
 
-      <div class="scrubber-row">
-        <div class="song-img"><img src="http://placehold.it/40x40/414042/ffffff" width=
-        "40" height="40"></div>
 
-        <div class="song-text">
-          <div class="song-title">
-            Ain't No Sunshine
-          </div>
 
-          <div class="song-artist">
-            Bill Withers
-          </div>
-        </div>
-
-        <div class="player-controls">
-          <span class="prev-song">Prev</span> <span class="play-song">Play</span>
-          <span class="next-song">Next</span>
-        </div>
-      </div>
     </div>
+
+
+
     </div>
   </div>
 
+    <div class="container" id="panelContent">
 
-		<!-- JavaScript Includes -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-        <script src="js/jquery.sidr.min.js"></script>
-		<script src="js/all.js"></script>
+		<!-- Bottom Panel -->
+
+    <div class="scrubber-wrapper" id="bottomPanel">
+        <div class="scrubber-inner" id="audioScrubber">
+          <div class="scrubber-row">
+              <a href="" class="skel-panels-include" data-action="togglePanel" data-args="bottomPanel"></a>
+            <div class="song-img"><img src="http://placehold.it/40x40/414042/ffffff" width=
+            "40" height="40"></div>
+
+            <div class="song-text">
+              <div class="song-title">
+                Ain't No Sunshine
+              </div>
+
+              <div class="song-artist">
+                Bill Withers
+              </div>
+            </div>
+
+
+            <div class="player-controls">
+              <span class="prev-song">Prev</span> <span class="play-song">Play</span>
+              <span class="next-song">Next</span>
+            </div>
+          </div>
+          <!-- END SCRUBBER -->
+
+          <div class="scrubber-details">
+            <div class="playlist-details-row">
+                <h1 class="section-title">Sunny Music Details</h1>
+                <div class="playlist-info-txt clr">
+                    <p>
+                    I have a soft spot in my heart for the song "Sunny Side of the Street", and that song has helped me get through some tough times in my life. The lyric "Life can be so sweet/On the sunny side of the street" captures our general belief that rainy days are sad, while unny days are happy.
+
+                    </p>
+                </div>
+            </div>
+            <div class="playlist-suggestions-row">
+                <h1 class="section-title">You Might Hear Artists Like&hellip;</h1>
+                <div class="playlist-thumbs clr">
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+
+  </div>
+
+
 
 <script>
 moment.lang('en', {
