@@ -25,7 +25,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 html,body {
 	margin:0;
 	padding:0;
-    overflow: hidden;
+    //overflow: hidden;
 }
 table {
 	border-collapse:collapse;
@@ -64,7 +64,7 @@ body{
 	font-weight: 400;
 	font-size: 15px;
 	color: #FFF;
-	overflow: hidden;
+	//overflow: hidden;
 }
 .ie7 body{
 	overflow:hidden;
@@ -281,6 +281,10 @@ aside {
   float:right;
   text-align: right;
 }
+
+     #global-settings img{margin-top:10px}
+    .icon-small img {margin-top: 8px;}
+
 .icon-small {
   width: 8px;
   height: 8px;
