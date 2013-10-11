@@ -265,7 +265,7 @@ aside {
 
 /* line 262, ../sass/style.scss */
 .weather-details {
-  width: 218px;
+  display: inline-block;
 }
 
 /* line 266, ../sass/style.scss */

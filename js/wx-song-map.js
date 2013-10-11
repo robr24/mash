@@ -111,9 +111,21 @@
                     chimePlaylist.add({
                         title: item.title,
                         artist: item.artist_name,
-                        mp3: 'mp3/' + item.selector
+                        mp3: 'mp3/' + item.selector,
+                        albumCover: 'album-art/' + item.thumb
                     });
                 });
+            }
+
+            var updateWeatherDetails = function() {
+                var imgUrl = [chimeUser.iconSrc, chimeUser.wxicon, chimeUser.iconType].join('');
+                $('.forecast-city').html(chimeUser.userLocation);
+                $('.forecast-details-wxicon').css({
+                    backgroundImage: 'url(' + imgUrl + ')'
+                });
+                $('.content-obs-temp').html(chimeUser.temp + '&deg;');
+                $('.content-obs-phrase, .js-wx-phrase').html(chimeUser.desc);
+
             }
 
 
@@ -149,6 +161,8 @@
                     chimeUser.desc = desc;
 
                     chimeUser.temp = temp;
+
+                    updateWeatherDetails();
 
                     // alert('geolocarted');
 
