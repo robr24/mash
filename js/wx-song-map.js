@@ -111,7 +111,8 @@
                     chimePlaylist.add({
                         title: item.title,
                         artist: item.artist_name,
-                        mp3: 'mp3/' + item.selector
+                        mp3: 'mp3/' + item.selector,
+                        albumCover: 'album-art/' + item.thumb
                     });
                 });
             }
