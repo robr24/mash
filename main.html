@@ -32,64 +32,131 @@
     <li><span>Image 06</span></li>
   </ul>
 
-<div class="flip-container doubleTap" id="flip-toggle">
-  <div class="page-wrap">
+	<div class="flip-container doubleTap" id="flip-toggle">
+		<div class="flipper">
+			<div class="front">
+  <div class="pg-home page-wrap">
     <div class="blurred-bg">
+      <div class="top-wrap">
+        <ul class="menu-bar">
+            <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
+            <li><h1 class="top-title"></h1></li>
+            <li><a id="global-settings"><span class="icon-menu" aria-hidden="true"></span></a></li>
+        </ul>
+      </div>
 
-<div class="flipper">
 
-    <div class="front pg-home" id="panelContent">
-                  <div class="top-wrap">
-                    <ul class="menu-bar">
-                        <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
-                        <li><h1 class="top-title"></h1></li>
-                        <li><a id="global-settings"><span class="icon-menu" aria-hidden="true"></span></a></li>
-                    </ul>
+    <div class="bottom-wrap">
+      <div class="forecast-row">
+        <!--Weather Details-->
 
-                  </div>
+        <div class="weather-details">
+          <div class="heading clear">
+            <div class="forecast-location">
+              <span class="icon-small magnify"></span>
+              <span class="forecast-city">Atlanta</span>
+            </div>
 
-        <div class="bottom-wrap">
-          <div class="forecast-row">
-            <!--Weather Details-->
-
-            <div class="weather-details">
-              <div class="heading clear">
-                <div class="forecast-location">
-                  <span class="icon-small magnify"></span>
-                  <span class="forecast-city">Atlanta</span>
+            <div class="forecast-time">
+              <div class="clock">
+                <div class="display">
+                  <div class="digits"></div>
+                  <span class="icon-small alarm"></span>
                 </div>
-
-                <div class="forecast-time">
-                  <div class="clock">
-                    <div class="display">
-                      <div class="digits"></div>
-                      <span class="icon-small alarm"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="content-obs">
-                <!-- wx icon -->
-
-                <div style="background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"
-                class="forecast-details-wxicon"></div><!-- // wx icon -->
-
-                <div class="content-obs-text">
-                  <span class="content-obs-temp">72&deg;</span> <span class=
-                  "content-obs-phrase">Sunny</span>
-                </div><!-- // content obs text -->
               </div>
             </div>
           </div>
 
+          <div class="content-obs">
+            <!-- wx icon -->
 
+            <div style="background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"
+            class="forecast-details-wxicon"></div><!-- // wx icon -->
 
+            <div class="content-obs-text">
+              <span class="content-obs-temp">72&deg;</span> <span class=
+              "content-obs-phrase">Sunny</span>
+            </div><!-- // content obs text -->
+          </div>
         </div>
+      </div>
+
 
 
     </div>
-    <div class="back pg-playlist">
+
+
+
+    </div>
+
+    <div class="container" id="panelContent">
+ 		<!-- Bottom Panel -->
+
+    <div class="scrubber-wrapper" id="bottomPanel">
+        <div class="scrubber-inner" id="audioScrubber">
+        <div class="scrubber-inner-wrap">
+
+          <div class="scrubber-row">
+              <a href="" class="skel-panels-include" data-action="togglePanel" data-args="bottomPanel"></a>
+            <div class="song-img"><img src="http://placehold.it/40x40/414042/ffffff" width=
+            "40" height="40"></div>
+
+            <div class="song-text">
+              <div class="song-title">
+                Ain't No Sunshine
+              </div>
+
+              <div class="song-artist">
+                Bill Withers
+              </div>
+            </div>
+
+
+            <div class="player-controls">
+              <span class="prev-song">Prev</span> <span class="play-song">Play</span>
+              <span class="next-song">Next</span>
+            </div>
+          </div>
+          <!-- END SCRUBBER -->
+
+          <div class="scrubber-details">
+            <div class="playlist-details-row">
+                <h1 class="section-title">Sunny Music Details</h1>
+                <div class="playlist-info-txt clr">
+                    <p>
+                    I have a soft spot in my heart for the song "Sunny Side of the Street", and that song has helped me get through some tough times in my life. The lyric "Life can be so sweet/On the sunny side of the street" captures our general belief that rainy days are sad, while unny days are happy.
+
+                    </p>
+                </div>
+            </div>
+            <div class="playlist-suggestions-row">
+                <h1 class="section-title">You Might Hear Artists Like&hellip;</h1>
+                <div class="playlist-thumbs clr">
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.kickkicksnare.com/wp-content/uploads/2013/09/Sept-Mix-Art-85x85.jpg?084b2c" width="85" height="85"></div>
+                    <div class="play-thumb"><img src="http://www.hmv.com.sg/images/catalogue_cache/85x85_656982-3741795.jpg" width="85" height="85"></div>
+                </div>
+            </div>
+        </div>
+
+       </div>
+
+        </div>
+    </div>
+
+  </div>
+
+  </div>
+
+            </div>
+			<div class="back">
+        <div class="pg-playlist page-wrap">
+            <div class="blurred-bg">
                   <div class="top-wrap">
                     <ul class="menu-bar">
                         <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
@@ -104,7 +171,8 @@
                     </ul>
 
                   </div>
-                        <div class="mid-wrap">
+
+                <div class="mid-wrap">
                     <div class="playlist-image-row">
                         <img class="" src="http://s.imwx.com/img/mash/pl-featureimg-1.jpg">
                         <div class="heading top-heading clear">
@@ -323,15 +391,13 @@
                     </div> -->
                 </div>
 
+            </div>
+          </div>
+
+			</div>
+        </div>
     </div>
-</div>
 
-
-    </div>
-
-
-  </div>
-</div>
 <script>
 moment.lang('en', {
     meridiem : function (hour, isLowercase) {
