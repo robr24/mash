@@ -18,7 +18,7 @@ window._skel_panels_config = {
 	panels: {
 		bottomPanel: {
 			position: 'bottom',
-			size: "80%"
+			size: "70%"
 			/*
 				Since this panel is a bit more complicated, we're omitting its 'html' option and
 				defining it inline (ie. in index.html).
@@ -29,7 +29,7 @@ window._skel_panels_config = {
 		audioScrubber: {
 			position: 'bottom-center',
 			width: "100%",
-			height: 50
+			height: 60
 //			html:	'<a href="#" class="toggle icon-envelope" data-action="togglePanel" data-args="bottomPanel">TOGGLE</a>'
 		}
 	}

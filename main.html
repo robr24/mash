@@ -86,13 +86,13 @@
 
     </div>
   </div>
-
     <div class="container" id="panelContent">
-
-		<!-- Bottom Panel -->
+ 		<!-- Bottom Panel -->
 
     <div class="scrubber-wrapper" id="bottomPanel">
         <div class="scrubber-inner" id="audioScrubber">
+        <div class="scrubber-inner-wrap">
+
           <div class="scrubber-row">
               <a href="" class="skel-panels-include" data-action="togglePanel" data-args="bottomPanel"></a>
             <div class="song-img"><img src="http://placehold.it/40x40/414042/ffffff" width=
@@ -140,7 +140,10 @@
                 </div>
             </div>
         </div>
+
        </div>
+
+        </div>
     </div>
 
   </div>
@@ -163,6 +166,8 @@ var now = moment().format("h:MM A");
     $(".digits").text(now)
     setTimeout(update_time, 1000);
 });
+
+
 </script>
     </body>
 </html>
