@@ -7,27 +7,35 @@
     <head>
         <title>CHIME DEMO - new</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.sidr.dark.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'/>
 
     </head>
     <body>
   <ul class="full-slideshow">
     <li><span>Image 01</span></li>
-
     <li><span>Image 02</span></li>
-
     <li><span>Image 03</span></li>
-
     <li><span>Image 04</span></li>
-
     <li><span>Image 05</span></li>
-
     <li><span>Image 06</span></li>
   </ul>
 
   <div class="pg-home page-wrap">
     <div class="blurred-bg">
       <div class="top-wrap">
-        <div class="top-menu icon-large"></div>
+        <ul class="menu-bar">
+            <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
+            <li><span class="top-title">Current Conditions</span></li>
+            <li><a id="global-settings" href="#sidr-right"><span class="icon-menu" aria-hidden="true"></span></li>
+        </ul>
+        <ul class="action-bar">
+            <li>share</li>
+            <li>like</li>
+            <li>gift</li>
+        </ul>
+
       </div>
 
 
@@ -88,32 +96,18 @@
     </div>
   </div>
 
+<div id="#sidr-menu-source">
+  <ul>
+    <li class="user-block"><img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/36202_395894086684_5346286_n.jpg" width="80" height="80"></li>
+    <li class="active"><a href="#">List 2</a></li>
+    <li><a href="#">List 3</a></li>
+  </ul>
+</div>
 		<!-- JavaScript Includes -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-
-        <script>
-            moment.lang('en', {
-                meridiem : function (hour, isLowercase) {
-                    if (hour < 12) {
-                        return "A";
-                    } else {
-                        return "P";
-                    }
-                }
-            });
-
-            function update_time(){
-            var now = moment().format("h:MM A");
-            $(".digits").text(now)}
-
-            update_time();
-            setInterval(update_time, 1000);
-
-
-
-
-        </script>
+        <script src="js/jquery.sidr.min.js"></script>
+		<script src="js/all.js"></script>
 
 
     </body>

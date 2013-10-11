@@ -6,7 +6,10 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
     <head>
         <title>CHIME DEMO - new</title>
+
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'/>
 
     </head>
     <body>
@@ -22,7 +25,9 @@
   <div class="pg-home page-wrap">
     <div class="blurred-bg">
       <div class="top-wrap">
-        <div class="top-menu icon-large"></div>
+        <div id="global-menu" class="top-menu icon-large"></div>
+        <div class="top-title"></div>
+        <div id="global-settings" class="top-player icon-large"></div>
       </div>
 
 
@@ -86,6 +91,8 @@
 		<!-- JavaScript Includes -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+        <script src="js/vendor/jquery.sidr.min.js"></script>
+		<script src="js/all.js"></script>
 
         <script>
             moment.lang('en', {

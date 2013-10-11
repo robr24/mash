@@ -64,7 +64,7 @@ body{
 	background: #000;
 	font-weight: 400;
 	font-size: 15px;
-	color: #414042;
+	color: #FFF;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -72,7 +72,7 @@ body{
 	overflow:hidden;
 }
 a{
-	color: #333;
+	color: #FFF;
 	text-decoration: none;
 }
 .container{
@@ -101,8 +101,8 @@ body, html {
   margin: 0;
   padding: 0;
   //background-color: #f3f3f3;
-  background: #3f3f3f;
-  font-family: "Open Sans";
+  background: #000000;
+  font-family: "Open Sans", sans-serif;
 }
 
 $grids: 18;
@@ -111,6 +111,13 @@ $grids: 18;
 //$grids: add-grid(12 at 50em);
 $gutters: .5;
 
+// css circle
+$border-circle: 1000px !default;
+
+
+.user-block {
+  border-radius: $border-circle;
+}
 
 .page-wrap {
   //@include background-grid;
@@ -122,12 +129,13 @@ $gutters: .5;
 
 
 .blurred-bg {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.45);
   margin: 0;
   height: 100%;
   min-width: 100%;
   position: absolute;
   top: 0;
+  bottom: 0;
 }
 
 
@@ -152,22 +160,27 @@ aside {
     top: 0px;
     width: 100%;
     background-color: rgba(109, 111, 113, 0.75);
+  z-index: 5;
+
+}
+.mid-wrap {
+  z-index: 1;
 
 }
 // Playlist Page
 .pg-home .top-wrap {
-    max-height: 180px;
+    max-height: 160px;
     background-color: transparent;
 
 
 }
 // Playlist Page
 .pg-playlist .top-wrap {
-    max-height: 180px;
+    height: 100px;
 
 }
 .pg-playlist .mid-wrap {
-  margin-top: 180px;
+  margin-top: 100px;
 
 }
 // Playlist Details Page
@@ -227,7 +240,7 @@ aside {
     background: rgba(128, 128, 128, 0.75);
 }
 .heading {
-    border-bottom: solid 5px #414042;
+    border-bottom: solid 3px #FFF;
     padding: 5px 0px;
     font-size: 16px
 }
@@ -306,7 +319,12 @@ aside {
 .top-heading {
   font-size: 18px;
   line-height: 20px;
-  margin: 20px;
+  position: absolute;
+  bottom: 25px;
+  display: block;
+  width: auto;
+  left: 25px;
+  right: 25px;
 
 }
 
@@ -327,6 +345,10 @@ font-size: 24px;
 .song-info-row, .playlist-row, .playlist-details-row, .playlist-suggestions-row {
   margin: 20px;
 }
+ .row {
+     margin: 0 20px;
+ }
+
 h1.section-title {
   float: left;
   display: inline-block;
@@ -345,11 +367,13 @@ h1.section-title {
 .song-tags {
   padding-top: 15px;
 }
+.song-tags, .playlist-info-txt {color: #999999;
+font-size: 12px;}
 
 .playlist-item {
-  height: 50px;
-  line-height: 50px;
-  border-top: solid 3px #727376;
+  height: 45px;
+  line-height: 45px;
+  border-top: solid 1px #999999;
   padding: 8px 0;
 }
 .playlist-song-info {
@@ -359,8 +383,8 @@ h1.section-title {
   line-height: 1.3em;
 }
 .playlist-song-title {
-  font-size: 22px;
-  line-height: 26px
+  font-size: 18px;
+  line-height: 20px
 }
 .playlist-song-duration {
   float: right;
@@ -369,12 +393,16 @@ h1.section-title {
   display: inline-block;
 }
 .playlist-song-number {
-  width: 30px;
+  width: 40px;
   float: left;
   text-align: left;
   display: inline-block;
+  font-size: 14px
 }
-
+.playlist-artist-name {
+  color: #999999;
+  font-size: 12px;
+}
 .playlist-thumbs {
   padding-top:20px
 }
@@ -385,6 +413,36 @@ h1.section-title {
   display: inline-block;
   margin-bottom: 10px;
 }
+.playlist-image-row {
+position: relative;
+  //height: 150px;
+  //overflow: hidden;
+  display: block;
+//min-height: 200px;
+
+
+}
+.playlist-image-row img {
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+
+}
+
+
+// Breakpoints
+
+$mobile-portrait: 1px;
+$mobile-portrait-321: 321px;
+$mobile-landscape-min: 480px;
+$mobile-landscape-max: 640px;
+$tablet-portrait: 768px;
+//$tablet-landscape: "only screen" 1024px (orientation landscape);
+$tablet-landscape: 1024px;
+$desktop: 1025px;
+
+
 
 
 /* SLIDESHOW */
@@ -398,6 +456,9 @@ h1.section-title {
     left: 0px;
     z-index: 0;
 }
+
+
+
 .full-slideshow li span {
     width: 100%;
     height: 100%;
@@ -406,7 +467,6 @@ h1.section-title {
     left: 0px;
     color: transparent;
     background-size: cover;
-    background-position: 0 50%;
     background-repeat: none;
     opacity: 0;
     z-index: 0;
@@ -416,6 +476,13 @@ h1.section-title {
     -o-animation: imageAnimation 36s linear infinite 0s;
     -ms-animation: imageAnimation 36s linear infinite 0s;
     animation: imageAnimation 36s linear infinite 0s;
+
+    @include breakpoint($mobile-portrait){
+    background-position: right center;
+  }
+  @include breakpoint($tablet-portrait){
+    background-position: 0 50%;
+  }
 }
 .full-slideshow li div {
     z-index: 1000;

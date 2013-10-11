@@ -7,57 +7,127 @@
     <head>
         <title>CHIME DEMO - new</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.sidr.dark.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'/>
 
     </head>
     <body>
-        <ul class="full-slideshow">
-            <li><span>Image 01</span><div></div></li>
-            <li><span>Image 02</span><div></div></li>
-            <li><span>Image 03</span><div></div></li>
-            <li><span>Image 04</span><div></div></li>
-            <li><span>Image 05</span><div></div></li>
-            <li><span>Image 06</span><div></div></li>
-        </ul>
-        
+        <!--<ul class="full-slideshow">-->
+            <!--<li><span>Image 01</span><div></div></li>-->
+            <!--<li><span>Image 02</span><div></div></li>-->
+            <!--<li><span>Image 03</span><div></div></li>-->
+            <!--<li><span>Image 04</span><div></div></li>-->
+            <!--<li><span>Image 05</span><div></div></li>-->
+            <!--<li><span>Image 06</span><div></div></li>-->
+        <!--</ul>-->
+
+        <style>
+            h1.top-title {
+                font-size:24px;
+                line-height: 55px;
+            }
+            .menu-bar, .menu-bar a, .action-bar, .action-bar a {color: #FFFFFF;}
+            .menu-bar, .action-bar {
+                padding: 0 10px;
+                background: rgba(0,0,0,0.8);
+                color: #FFFFFF;
+                position: relative;
+                border-bottom: solid 1px #2B2C2C;
+            }
+            .menu-bar {
+                height: 55px;
+            }
+            .menu-bar li {
+              width:20%;
+              display: block;
+              position: absolute;
+            }
+            .menu-bar .icon-menu, .menu-bar .icon-settings {font-size: 45px; line-height: 55px;}
+            .menu-bar li:first-child {left: 0; width: 50px}
+            .menu-bar li:last-child {right: 0; width: 50px; font-weight: 600;}
+            .menu-bar li:nth-child(2) {position: absolute; text-align: center; width: 100%}
+            .action-bar {
+                height: 45px;
+            }
+            .action-bar span {font-size: 25px; line-height: 45px;}
+
+            .action-bar li{
+                width: 35px;
+                height: 35px;
+                display: inline-block;
+                text-align: right;
+                float: right;
+                margin-left: 10px;
+            }
+            .action-bar li:first-child {
+                float: left;
+                text-align: left;
+                margin-left: 0;
+            }
+
+        </style>
+
         <div class="pg-playlist page-wrap">
             <div class="blurred-bg">
                 <div class="top-wrap">
-                    <div class="heading top-heading clear">
-                        <div class="forecast-location">
-                            <span class="icon-small magnify"></span>
-                            <span class="forecast-city">Atlanta</span>
-                        </div>
-                        <div class="forecast-obs">
-                            <span class="forecast-details-wxicon icon-small" style="background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"class="forecast-details-wxicon"></span>
-                            <span class="content-obs-temp">72&deg;</span>
-                            <span class="content-obs-phrase">Sunny</span>
-                        </div>
-                        <div class="forecast-time">
-                            <div class="clock">
-                                <div class="display">
-                                    <div class="digits"></div>
-                                    <span class="icon-small alarm"></span>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="top-wrap">
+                    <ul class="menu-bar">
+                        <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
+                        <li><h1 class="top-title">Current Conditions</h1></li>
+                        <li><a id="global-settings"><span class="icon-menu" aria-hidden="true"></span></a></li>
+                    </ul>
+                    <ul class="action-bar">
+                        <li><a href=""><span class="icon-thin_arrow_left" aria-hidden="true"></span></a></li>
+                        <li><a href=""><span class="icon-menu" aria-hidden="true"></span></a></li>
+                        <li><a href=""><span class="icon-menu" aria-hidden="true"></span></a></li>
+                        <li><a href=""><span class="icon-menu" aria-hidden="true"></span></a></li>
+                    </ul>
 
-                    </div>
+                  </div>
 
-                    <div class="song-info-row">
-                        <h1 class="section-title">Sunny Down South</h1>
-                        <div class="song-info-actions">
-                            <span class="icon-med exit"></span>
-                            <span class="icon-med like"></span>
-                        </div>
-                        <div class="song-tags clr">
-                            Tags: Sunshine, Sun, Bright, Ray, Shine, Clear, Good Day, Walking, Outside, Happy
-                        </div>
-                    </div>
+
 
 
 
                 </div>
                 <div class="mid-wrap">
+                    <div class="playlist-image-row">
+                        <img class="" src="http://s.imwx.com/img/mash/pl-featureimg-1.jpg">
+                        <div class="heading top-heading clear">
+                            <div class="forecast-location">
+                                <span class="icon-small magnify"></span>
+                                <span class="forecast-city">Atlanta</span>
+                            </div>
+                            <div class="forecast-obs">
+                                <span class="forecast-details-wxicon icon-small" style="background-image:url(http://s.imwx.com/img/mobileweb/wxicon/color/200/32.png)"class="forecast-details-wxicon"></span>
+                                <span class="content-obs-temp">72&deg;</span>
+                                <span class="content-obs-phrase">Sunny</span>
+                            </div>
+                            <div class="forecast-time">
+                                <div class="clock">
+                                    <div class="display">
+                                        <div class="digits"></div>
+                                        <span class="icon-small alarm"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="song-info-row">
+                        <h1 class="section-title">Sunny</h1>
+                        <div class="playlist-info-txt clr">
+                            <p>
+                            I have a soft spot in my heart for the song "Sunny Side of the Street", and that song has helped me get through some tough times in my life. The lyric "Life can be so sweet/On the sunny side of the street" captures our general belief that rainy days are sad, while unny days are happy.
+
+                            </p>
+                        </div>
+
+                        <div class="song-tags clr">
+                            Tags: Sunshine, Sun, Bright, Ray, Shine, Clear, Good Day, Walking, Outside, Happy
+                        </div>
+                    </div>
                     <div class="playlist-row">
                         <ol>
                             <li class="playlist-item">
@@ -193,6 +263,7 @@
                 </div>
 
             </div>
+          </div>
 
 		<!-- JavaScript Includes -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
