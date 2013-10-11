@@ -103,13 +103,13 @@
             "40" height="40"></div>
 
             <div class="song-text">
-              <div class="song-title">
+              <!-- <div class="song-title">
                 Ain't No Sunshine
               </div>
 
               <div class="song-artist">
                 Bill Withers
-              </div>
+              </div> -->
             </div>
 
 
@@ -470,9 +470,19 @@ $(".doubleTap").click(function(){
                }
        );
 
+
 $(document).on('ready', function() { 
 
-   getLocation();        
+   getLocation();  
+
+   $('#chimePlayer').bind($.jPlayer.event.play, function(event)   {
+
+        
+        var item = $('a.jp-playlist-current').html();
+
+        $('.song-text').html(item);
+
+   });
 
 });
 
