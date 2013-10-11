@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>ID3 Tags</title>
+    <script src="js/id3.min.js"></script>
+    <script src="js/file-reader.js"></script>    
+</head>
+<body>
+    <h1>ID3 Tags</h1>
+    
+        <h2 id="demo">Demo</h2>   
+    <ol class="files" ondragover="event.stopPropagation(); event.preventDefault();"
+     ondrop="event.stopPropagation(); event.preventDefault(); loadFromFile(event.dataTransfer.files[0]);">
+        <li>Click to read the ID3 info from the following music files:
+           
+        </li>
+        <li>
+            <form style="display: inline">
+                <script>if(typeof FileReader === "undefined") document.write('<span class="warning">[Not supported by your browser]</span>')</script>
+                Use your own local files: <input type="file" id="file" onchange="load(this)">
+            </form>
+        </li>
+        <li>You can also drag your local files here if it's supported by your browser</li>
+    </ol>
+    <dl>
+        <dt>Artist</dt>
+        <dd id="artist"></dd>
+        
+        <dt>Title</dt>
+        <dd id="title"></dd>
+        
+        <dt>Album</dt>
+        <dd id="album"></dd>
+        
+        <dt>Year</dt>
+        <dd id="year"></dd>
+        
+        <dt>Comment</dt>
+        <dd id="comment"></dd>
+        
+        <dt>Genre</dt>
+        <dd id="genre"></dd>
+        
+        <dt>Track</dt>
+        <dd id="track"></dd>
+        
+        <dt>Lyrics</dt>
+        <dd id="lyrics"></dd>
+        
+        <dt>Cover Art</dt>
+        <dd><img id="art" src=""></dd>
+    </dl>
+</body>
+</html>

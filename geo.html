@@ -1,0 +1,47 @@
+<html>
+    <head>
+          
+        <script>    
+          
+                  
+            var getLocation = function() {
+                  var x = document.getElementById('geo');
+                  if (navigator.geolocation){
+                      //navigator.geolocation.getCurrentPosition(showPosition);
+                      
+                      console.info(position.coords.latitude);
+                      
+                  }
+            
+                  else {
+                    x.innerHTML= "Geolocation is required for this app to work.";                      
+                  }                  
+              };
+              
+//              var showPosition = function(position) {
+//                  var x = document.getElementById('geo');
+//                  x.innerHTML = "Latitude: " + position.coords.latitude 
+//                    
+//                        +    "<br>Longitude: " + position.coords.longitude;
+//              };
+//              
+      </script>
+              
+                      
+    </head>
+    <body>
+        <h1>Geolocation</h1>
+        <div id="demo">
+            
+        </div>
+        
+        
+        
+         <script type="text/javascript" >
+               
+              
+           
+      </script>        
+    </body>
+</html>
+
