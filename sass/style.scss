@@ -237,14 +237,21 @@ aside {
 
 .song-text {
   margin-left: 10px;
+  height: 18px;
+  line-height: 20px;
+  & span {
+  display: block;
+  }
 }
+/*
 .song-text > div {
     clear: both;
     display:block;
   height: 18px;
-  line-height: 26px;
+  //line-height: 26px;
 
 }
+*/
 .scrubber-row .player-controls {
   float: right;
   width: 110px;
