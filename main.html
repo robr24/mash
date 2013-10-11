@@ -7,10 +7,10 @@
     <head>
         <title>CHIME DEMO - new</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/icon-fonts.css" />
         <!--<link rel="stylesheet" type="text/css" href="css/vendor/jquery.sidr.dark.css" />-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'/>
   <link rel="stylesheet" href="css/vendor/jplayer-black/jplayer.midnight.black.css"/>
+        <link rel="stylesheet" type="text/css" href="css/icon-fonts.css" />
 
   <!--<link rel="stylesheet" href="css/vendor/jplayer.blue.monday.css"/>-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -24,6 +24,10 @@
 
     </head>
     <body>
+    <style>#global-settings img{margin-top:10px}
+    .icon-small img {margin-top: 8px;}
+    </style>
+
   <ul class="full-slideshow">
     <li><span>Image 01</span></li>
     <li><span>Image 02</span></li>
@@ -42,7 +46,7 @@
         <ul class="menu-bar">
             <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
             <li><h1 class="top-title"></h1></li>
-            <li><a id="global-settings"><span aria-hidden="true" class="icon-music_bars"></span></a></li>
+            <li><a id="global-settings"><img src="img/icons-32-white/music_bars.png"></a></li>
         </ul>
       </div>
 
@@ -54,7 +58,7 @@
         <div class="weather-details">
           <div class="heading clear">
             <div class="forecast-location">
-              <span class="icon-small magnify"></span>
+              <span class="icon-small magnify"><img src="img/icons-12-white/magnifying_glass.png"></span>
               <span class="forecast-city">Atlanta</span>
             </div>
 
@@ -62,7 +66,7 @@
               <div class="clock">
                 <div class="display">
                   <div class="digits"></div>
-                  <span class="icon-small alarm"></span>
+                  <span class="icon-small alarm"><img src="img/icons-12-white/alarm_clock.png"></span>
                 </div>
               </div>
             </div>
@@ -184,9 +188,12 @@
                     </ul>
                     <ul class="action-bar">
                         <li><span class="icon-thin_arrow_left doubleTap" aria-hidden="true"></span></li>
-                        <li><a href=""><span class="icon-menu" aria-hidden="true"></span></a></li>
-                        <li><a href=""><span class="icon-menu" aria-hidden="true"></span></a></li>
-                        <li><a href=""><span class="icon-menu" aria-hidden="true"></span></a></li>
+                        <li><a href=""><span class="icon-large" aria-hidden="true" width="25" height="25">
+                            <img src="img/icons-32-white/share.png" width="25" height="25"></span></a></li>
+                        <li><a href=""><span class="icon-large" aria-hidden="true">
+                            <img src="img/icons-32-white/thumbsup_like.png" width="25" height="25"></span></a></li>
+                        <li><a href=""><span class="icon-large" aria-hidden="true">
+                            <img src="img/icons-32-white/gift_box.png"></span></a></li>
                     </ul>
 
                   </div>
