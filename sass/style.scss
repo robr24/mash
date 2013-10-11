@@ -261,20 +261,20 @@ aside {
   width: 8px;
   height: 8px;
   display: inline-block;
-  background-color: #414042;
+  background-color: #FFF;
 }
 .icon-med {
   width: 28px;
   height: 28px;
   display: inline-block;
-  background-color: #414042;
+  background-color: #FFF;
 }
 
 .icon-large {
   width: 35px;
   height: 35px;
   display: inline-block;
-  background-color: #414042;
+  background-color: #FFF;
 }
 .weather-details .forecast-location,
 .weather-details .forecast-time {
@@ -292,6 +292,9 @@ aside {
   text-align: center;
 }
 
+.now-playing span {
+  color: #369BD6;
+}
 
 .weather-details .forecast-details-wxicon {
     background-position: 50% 50%;
@@ -348,6 +351,51 @@ font-size: 24px;
  .row {
      margin: 0 20px;
  }
+
+
+h1.top-title {
+    font-size:24px;
+    line-height: 55px;
+}
+.menu-bar, .menu-bar a, .action-bar, .action-bar a {color: #FFFFFF;}
+.menu-bar, .action-bar {
+    padding: 0 10px;
+    background: rgba(0,0,0,0.8);
+    color: #FFFFFF;
+    position: relative;
+    border-bottom: solid 1px rgba(156, 156, 156, 0.6);
+}
+.menu-bar {
+    height: 55px;
+}
+.menu-bar li {
+  width:20%;
+  display: block;
+  position: absolute;
+}
+.menu-bar .icon-menu, .menu-bar .icon-settings {font-size: 45px; line-height: 55px;}
+.menu-bar li:first-child {left: 0; width: 50px}
+.menu-bar li:last-child {right: 0; width: 50px; font-weight: 600;}
+.menu-bar li:nth-child(2) {position: absolute; text-align: center; width: 100%}
+.action-bar {
+    height: 45px;
+}
+.action-bar span {font-size: 25px; line-height: 45px;}
+
+.action-bar li{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    margin-left: 10px;
+}
+.action-bar li:first-child {
+    float: left;
+    text-align: left;
+    margin-left: 0;
+}
+
 
 h1.section-title {
   float: left;
