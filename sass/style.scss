@@ -260,7 +260,8 @@ aside {
     font-size: 16px
 }
 .weather-details {
-    width: 218px;
+    //width: 218px;
+    display: inline-block;
 }
 
 .digits {display: inline-block;}

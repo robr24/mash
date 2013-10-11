@@ -116,6 +116,17 @@
                 });
             }
 
+            var updateWeatherDetails = function() {
+                var imgUrl = [chimeUser.iconSrc, chimeUser.wxicon, chimeUser.iconType].join('');
+                $('.forecast-city').html(chimeUser.userLocation);
+                $('.content-obs').find('.forecast-details-wxicon').css({
+                    backgroundImage: 'url(' + imgUrl + ')'
+                });
+                $('.content-obs-temp').html(chimeUser.temp + '&deg;');
+                $('.content-obs-phrase').html(chimeUser.desc);
+
+            }
+
 
             var showWeather = function(position) {
                 //var url = [ 'http://api.wunderground.com/api/5f12c0c5ef78f0dc/geolookup/conditions/q/', position.coords.latitude, ',', position.coords.longitude, '.json'].join('');
@@ -149,6 +160,8 @@
                     chimeUser.desc = desc;
 
                     chimeUser.temp = temp;
+
+                    updateWeatherDetails();
 
                     // alert('geolocarted');
 

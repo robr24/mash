@@ -1,28 +1,28 @@
 /* CSS reset */
-/* line 22, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 25, ../sass/style.scss */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 fieldset, img {
   border: 0;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 input {
   border: 1px solid #b0b0b0;
   padding: 3px 5px 4px;
@@ -30,40 +30,40 @@ input {
   width: 190px;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 address, caption, cite, code, dfn, th, var {
   font-style: normal;
   font-weight: normal;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 caption, th {
   text-align: left;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 q:before, q:after {
   content: '';
 }
 
-/* line 60, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 abbr, acronym {
   border: 0;
 }
 
 /* General Demo Style */
-/* line 63, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 body {
   background: #000;
   font-weight: 400;
@@ -73,28 +73,28 @@ body {
   overflow-x: hidden;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .ie7 body {
   overflow: hidden;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 a {
   color: #FFF;
   text-decoration: none;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .container {
   position: relative;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .clr {
   clear: both;
 }
 
-/* line 86, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .clear:before, .clear:after {
   content: "\0020";
   display: block;
@@ -102,17 +102,17 @@ a {
   overflow: hidden;
 }
 
-/* line 93, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .clear:after {
   clear: both;
 }
 
-/* line 97, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 p {
   line-height: 1.8em;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 body, html {
   height: 100%;
   margin: 0;
@@ -121,45 +121,31 @@ body, html {
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .user-block {
   border-radius: 1000px;
 }
 
-/* line 122, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .page-wrap, .flip-container, .flipper, .front {
   margin: 0 auto;
   height: 100%;
   position: relative;
 }
 
-/* line 142, ../sass/style.scss */
-.main-content {
-  width: 54.71698%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0%;
-  clear: none;
-}
-
-/* line 148, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .playlist img {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 aside {
-  width: 43.39623%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 62.26415%;
-  clear: none;
   background: #3f3f3f;
 }
 
-/* line 158, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 .top-wrap {
   position: fixed;
   top: 0px;
@@ -169,43 +155,43 @@ aside {
   zoom: 1;
 }
 
-/* line 167, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 .mid-wrap {
   z-index: 1;
 }
 
-/* line 172, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 .pg-home .top-wrap {
   max-height: 160px;
   background-color: transparent;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .pg-playlist .top-wrap {
   height: 100px;
 }
 
-/* line 183, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .pg-playlist .mid-wrap {
   margin-top: 100px;
 }
 
-/* line 188, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .pg-playlist-details .top-wrap {
   max-height: 150px;
 }
 
-/* line 192, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .pg-playlist-details .mid-wrap {
   margin-top: 170px;
 }
 
-/* line 196, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .pg-playlist-details .top-heading {
   margin-bottom: 0px;
 }
 
-/* line 200, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .bottom-wrap {
   position: fixed;
   left: 0;
@@ -213,20 +199,20 @@ aside {
   width: 100%;
 }
 
-/* line 206, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .top-menu {
   float: left;
   margin: 10px;
 }
 
-/* line 220, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 .scrubber-inner-wrap {
   width: auto;
   height: 1000px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 225, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 .scrubber-row {
   display: block;
   height: 60px;
@@ -234,18 +220,18 @@ aside {
   padding: 10px;
 }
 
-/* line 234, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .scrubber-row > div {
   display: inline-block;
   float: left;
 }
 
-/* line 239, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .song-text {
   margin-left: 10px;
 }
 
-/* line 242, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .song-text > div {
   clear: both;
   display: block;
@@ -253,28 +239,28 @@ aside {
   line-height: 26px;
 }
 
-/* line 249, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .scrubber-row .player-controls {
   float: right;
   width: 105px;
 }
 
-/* line 254, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .forecast-row {
   padding: 0px 20px 20px 20px;
   height: 135px;
 }
 
-/* line 258, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 .heading {
   border-bottom: solid 3px #FFF;
   padding: 5px 0px;
   font-size: 16px;
 }
 
-/* line 263, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .weather-details {
-  width: 218px;
+  display: inline-block;
 }
 
 /* line 267, ../sass/style.scss */
