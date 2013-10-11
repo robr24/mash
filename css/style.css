@@ -1040,3 +1040,85 @@ h1.section-title {
     font-size: 80px;
   }
 }
+/* simple */
+/* line 730, ../sass/style.scss */
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+}
+
+/* line 739, ../sass/style.scss */
+.flip-container.hover .flipper, #flip-toggle.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/* line 748, ../sass/style.scss */
+.flip-container, .front, .back {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 753, ../sass/style.scss */
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* line 766, ../sass/style.scss */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 776, ../sass/style.scss */
+.front {
+  z-index: 2;
+}
+
+/* line 781, ../sass/style.scss */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* vertical */
+/* line 790, ../sass/style.scss */
+.vertical.flip-container {
+  position: relative;
+}
+
+/* line 794, ../sass/style.scss */
+.vertical .back {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* line 800, ../sass/style.scss */
+.vertical.flip-container .flipper {
+  -webkit-transform-origin: 100% 213.5px;
+  -moz-transform-origin: 100% 213.5px;
+  transform-origin: 100% 213.5px;
+}
+
+/* line 806, ../sass/style.scss */
+.vertical.flip-container:hover .flipper {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
