@@ -27,15 +27,9 @@
       <div class="top-wrap">
         <ul class="menu-bar">
             <li><a id="global-menu" href="#sidr-menu-source"><span class="icon-menu" aria-hidden="true"></span></a></li>
-            <li><span class="top-title">Current Conditions</span></li>
-            <li><a id="global-settings" href="#sidr-right"><span class="icon-menu" aria-hidden="true"></span></li>
+            <li><h1 class="top-title"></h1></li>
+            <li><a id="global-settings"><span class="icon-menu" aria-hidden="true"></span></a></li>
         </ul>
-        <ul class="action-bar">
-            <li>share</li>
-            <li>like</li>
-            <li>gift</li>
-        </ul>
-
       </div>
 
 
@@ -46,6 +40,7 @@
         <div class="weather-details">
           <div class="heading clear">
             <div class="forecast-location">
+              <span class="icon-small magnify"></span>
               <span class="forecast-city">Atlanta</span>
             </div>
 
@@ -53,6 +48,7 @@
               <div class="clock">
                 <div class="display">
                   <div class="digits"></div>
+                  <span class="icon-small alarm"></span>
                 </div>
               </div>
             </div>
@@ -96,19 +92,29 @@
     </div>
   </div>
 
-<div id="#sidr-menu-source">
-  <ul>
-    <li class="user-block"><img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/36202_395894086684_5346286_n.jpg" width="80" height="80"></li>
-    <li class="active"><a href="#">List 2</a></li>
-    <li><a href="#">List 3</a></li>
-  </ul>
-</div>
+
 		<!-- JavaScript Includes -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
         <script src="js/jquery.sidr.min.js"></script>
 		<script src="js/all.js"></script>
 
+<script>
+moment.lang('en', {
+    meridiem : function (hour, isLowercase) {
+        if (hour < 12) {
+            return "a";
+        } else {
+            return "p";
+        }
+    }
+});
 
+$(document).ready(function update_time(){
+var now = moment().format("h:MM A");
+    $(".digits").text(now)
+    setTimeout(update_time, 1000);
+});
+</script>
     </body>
 </html>

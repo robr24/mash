@@ -1,4 +1,4 @@
-(function( $ ){
+
 
 					// initialize the slider menus
 
@@ -29,23 +29,18 @@
 
 
 
-
 moment.lang('en', {
     meridiem : function (hour, isLowercase) {
         if (hour < 12) {
-            return "A";
+            return "a";
         } else {
-            return "P";
+            return "p";
         }
     }
 });
 
-function update_time(){
+$(document).ready(function update_time(){
 var now = moment().format("h:MM A");
-$(".digits").text(now)}
-
-update_time();
-setInterval(update_time, 1000);
-
-
-    })( jQuery );
+    $(".digits").text(now)
+    setTimeout(update_time, 1000);
+});
