@@ -119,7 +119,7 @@
             var updateWeatherDetails = function() {
                 var imgUrl = [chimeUser.iconSrc, chimeUser.wxicon, chimeUser.iconType].join('');
                 $('.forecast-city').html(chimeUser.userLocation);
-                $('.content-obs').find('.forecast-details-wxicon').css({
+                $('.forecast-details-wxicon').css({
                     backgroundImage: 'url(' + imgUrl + ')'
                 });
                 $('.content-obs-temp').html(chimeUser.temp + '&deg;');
